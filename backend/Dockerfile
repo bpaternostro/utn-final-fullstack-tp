@@ -1,10 +1,17 @@
-FROM node:lts-alpine3.12 as build
+# Use the official Node.js image
+FROM node:14
 
-# The /app directory should act as the main application directory
+# Set the working directory
 WORKDIR /app
 
-COPY . .
+# Copy package.json and package-lock.json to the container
+COPY package*.json ./
 
+# Install dependencies
 RUN npm install
 
-CMD [ "npm", "run", "build" ]
+# Copy the rest of the application files
+COPY . .
+
+# Expose the backend port
+EXPOSE 4010
