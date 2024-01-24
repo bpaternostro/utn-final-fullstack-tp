@@ -45,6 +45,7 @@ services:
 volumes:
   react_build:
   static_volume:
+  mongo_data:
 
 networks:
   my_network_tp:
