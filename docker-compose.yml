@@ -54,8 +54,8 @@ services:
       - /media:/media:ro
       - static_volume:/etc/nginx/html/static:ro
     depends_on:
-      - frontend_tp
-      - backend_tp
+      - frontend
+      - backend
     networks:
       - my_network_tp
 
