@@ -1,0 +1,153 @@
+.product{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    background: var(--grey-white);
+    /* Shadows/Gray Blue 30/3%/5b */
+    box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
+    border: 10px;
+    padding: 20px;
+    width: 100%;
+}
+
+.imageContainer, .productBanner, .priceQuantityBanner, .buttonContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.productBanner{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 10px;
+}
+
+
+.buttonContainerHeader{
+    width: 100%;
+    margin: 5px;
+    display: none;
+}
+
+.buttonContainerFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+
+}
+
+
+.imageContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product > span{
+    text-align: start;
+}
+
+.categoryName{
+    font-size: 14px;
+    font-weight: var(--font-weight-light);
+}
+
+.productName{
+    font-size: 18px;
+    font-weight: var(--font-weight-strong);
+}
+
+.priceQuantityBanner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.currency{
+    font-size: 16px;
+    font-weight: var(--font-weight-light);
+}
+
+.price{
+    font-size: 20px;
+    font-weight: var(--font-weight-strong);
+}
+
+.stockBanner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;   
+}
+
+.stockMessage, .stock{
+    font-size: 12px;
+    font-weight: var(--font-weight-light);
+}
+
+.minus, .plus{
+    background: transparent;
+    border: 1px solid #666;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.stock{
+    font-size: 12px;
+}
+
+.quantityManager, .priceBanner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+.priceQuantityBanner > span:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}
+@media screen and (max-width: 600px) {
+    .product{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .imageContainer, .productBanner, .priceQuantityBanner, .buttonContainer{
+        width: 90%;
+        align-items: center;
+        gap: 15px;
+    }
+    .productName{
+        text-align: center;
+    }
+    .buttonContainerHeader{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+    }
+    .buttonContainerFooter{
+        display: none;
+    }
+}

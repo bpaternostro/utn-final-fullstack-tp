@@ -1,0 +1,351 @@
+.admin{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 85%;
+}
+
+main > .mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.adminFormContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+}
+
+.adminSectionContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 90%;
+    height: 100%;
+    gap:40px;
+    align-items: start;
+}
+
+.adminSectionContainer > .adminSections {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-start;
+    justify-content: start;
+}
+
+.adminSections{
+    flex-direction: row;
+    justify-content: start;
+}
+
+.adminSections > div:nth-child(2){
+    width: 100%;
+}
+
+.adminTableBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.adminRow{
+    padding: 10px;
+    border-bottom: 3px solid var(--gray-blue-grey-blue-95, #EDEFF2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.adminRow > div > span{
+    padding: 10px;
+}
+
+.adminRow > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.adminRow > div:nth-child(1){
+    width: var(--admin-1-col);
+    background-color: var(--grey-white);
+    border-radius: 15px;
+}
+
+.adminRow > div:nth-child(1) > span{
+    width: 50%;
+}
+
+.adminRow > div:nth-child(2){
+    width: var(--admin-2-col);
+}
+
+.adminRow > div:nth-child(2) > span{
+    width: 100%;
+}
+
+.adminRow > div:nth-child(3){
+    text-align: center;
+    width: var(--admin-3-col);
+    border-radius: 3px;
+    border: 2px solid var(--gray-blue-grey-blue-95, #EDEFF2);
+}
+
+.adminRow > div:nth-child(3) > span{
+    width: 33%;
+}
+
+
+.adminRow > div:nth-child(4){
+    text-align: center;
+    width: var(--admin-4-col);
+    border-radius: 3px;
+    border: 2px solid var(--gray-blue-grey-blue-95, #EDEFF2);
+}
+
+
+.adminRow > div:nth-child(4) > span{
+    width: 100%;
+}
+
+.productImageContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productImageContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.informationMessage{
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+}
+
+.productImage{
+    width: 80%;
+}
+
+.productImageDetail{
+    width: 300px;
+}
+
+.productFormContainer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    border: 4px solid var(--gray-blue-grey-blue-95, #EDEFF2);
+    border-radius: 10px;
+    padding: 30px;
+
+}
+
+.productFormContainer > span{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.productFormContainer > span:nth-child(1){
+    padding: 20px;
+    width: 70%;
+    border: 2px solid var(--gray-blue-grey-blue-95, #EDEFF2);
+    border-radius: 10px;
+    background-color: var(--grey-white);
+}
+
+.productFormContainer > span:nth-child(1) > div{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.productFormContainer > span:nth-child(2){
+    width: 100%;
+}
+
+.productFormContainer > span:nth-child(2) > span{
+    display: flex;
+    gap: 5px;
+}
+
+.productFormContainer > span:nth-child(2) > span:nth-child(1), .productFormContainer > span:nth-child(2) > span:nth-child(4){
+    flex-direction: column;
+}
+
+.colorContainer{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    border: 2px solid var(--gray-blue-grey-blue-95, #EDEFF2);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.colorContainer > span:nth-child(2){
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+}
+
+.colorsLabel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap:5px;
+    font-size: 12px;
+    width: 50%;
+}
+
+.productFormContainer > span:nth-child(2) > span{
+    width: 100%;
+}
+
+.productFormContainer > span:nth-child(2) > span:nth-child(2) > span{
+    width: 50%;
+}
+
+.productFormContainer > span:nth-child(2) > span:nth-child(3) > span{
+    width: 33%;
+}
+
+.productFormContainer > span:nth-child(2) > span:nth-child(4) > span, .productFormContainer > span:nth-child(2) > span:nth-child(1) > span{
+    width: 100%;
+}
+
+.textarea{
+    width: 100%;
+    height: 200px;
+}
+
+.toolbar{
+    display: flex;
+    gap:10px;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+}
+
+.myCheckBox{
+    width: 20px;
+}
+
+.iconTable{
+    width: 100%;
+}
+
+.adminTableBubble{
+    padding: 5px 10px 5px 10px;
+    border: 2px solid var(--gray-blue-grey-blue-80);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 14px;
+    color: var(--gray-blue-grey-blue-50);
+}
+
+@media screen and (max-width: 1100px) {
+
+    .adminRow{
+        flex-direction: column;
+    }
+
+}
+@media screen and (max-width: 1000px) {
+    .admin{
+        padding: 30px 5px;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+
+    .adminTotal{
+        width: 90%;
+        margin: 10px;
+    }
+    .adminTotalContainer{
+        height: 100%;
+        width: 100%;
+    }
+
+    .adminSectionContainer > div:nth-child(2){
+        justify-content: center;
+    }
+
+    .productFormContainer{
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .adminFormContainer{
+        width: 80vw;
+        margin:50px;
+        
+    }
+    .productFormContainer > span:nth-child(1){
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .toolbar{
+        justify-content: center;
+    }
+
+    .adminFormContainer{
+        width: 90vw;
+    }
+
+    .colorContainer > span:nth-child(2){
+        flex-direction: column;
+    }
+
+    .productFormContainer > span:nth-child(2) > span{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .productFormContainer > span:nth-child(2) > span:nth-child(2) > span, .productFormContainer > span:nth-child(2) > span:nth-child(3) > span{
+        width: 100%;
+    }
+    
+    .colorsLabel{
+        width: 100%;
+    }
+
+    .adminRow > div:nth-child(1), .adminRow > div:nth-child(3){
+        flex-direction: column;
+    }
+
+    .adminRow > div:nth-child(3) > span{
+        width: 100%;
+    }
+
+    .adminTableBubble{
+        width: 100%;
+    }
+}

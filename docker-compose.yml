@@ -1,0 +1,50 @@
+version: '3'
+
+services:
+
+  # MongoDB service
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - my_network
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend
+    volumes:
+      - react_build:/app/dist
+    environment:
+      - NODE_ENV=production
+    networks:
+      - my_network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    ports:
+      - "4010:4010"
+    environment:
+      - NODE_ENV=production
+    restart: always
+    depends_on:
+      - db
+    volumes:
+      - static_volume:/staticfiles
+      - /media:/media
+    networks:
+      - my_network
+
+volumes:
+  react_build:
+  static_volume:
+
+networks:
+  my_network:

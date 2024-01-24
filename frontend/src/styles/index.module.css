@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Roboto+Condensed:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,100;1,500;1,700;1,900&display=swap');
+
+:root{
+    --nav-bar-background:#FFF;
+    --header--footer--padding--full:9vw;
+    --grey-white:#FFF;
+    --grey-light:#C0C6C9;
+    --grey-normal:#586870;
+    --gray-blue-grey-blue-98: #F7F8FA;
+    --gray-blue-grey-blue-80: #ADB8CC;
+    --gray-blue-grey-blue-70: #7D8FB3;
+    --gray-blue-grey-blue-50: #4D5E80;
+    --gray-blue-grey-blue-60: #252B48;
+    --prime-letter-color: #4D5E80;
+    --site-button-color:#33BBC5;
+    --font-weight-light: 400;
+    --font-weight: 700;
+    --font-weight-strong: 900;
+    --font-family: 'Roboto', sans-serif; 
+    --font-family-links: 'Roboto Condensed', sans-serif;
+    --font-family-links-2: 'Poppins', sans-serif;
+    --color-violet: #614BC3;
+    --color-green-1: #33BBC5;
+    --color-green-2: #85E6C5;
+    --color-green-3: #C8FFE0;
+    --color-grey:#FFFFFF;
+    --background-color: rgba(200, 255, 224, .4);
+    --admin-1-col:25%;
+    --admin-2-col:40%;
+    --admin-3-col:25%;
+    --admin-4-col:8%;
+    --waring-color:#614BC3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    color: var(--gray-blue-grey-blue-50);
+    font-weight: var(--font-weight);
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--gray-blue-grey-blue-98);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    min-height: 70vh;
+}
+
+h1{
+    color: var(--gray-blue-grey-blue-50)
+}
+
+h3{
+    text-align: center;
+}
+
+button{
+    cursor: pointer;
+}
+
+.errorMessage{
+    font-weight: var(--font-weight);
+    color: var(--waring-color);
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.boxContainer{
+    border-radius: 10px;
+    background: var(--grey-white);
+    /* Shadows/Gray Blue 30/3%/5b */
+    box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
+    border: 10px;
+    padding: 20px;
+}
+
+span{
+    color: var(--prime-letter-color);
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.warningContainer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+input:invalid + .warningButton {
+    display: inline; /* Show the error icon */
+}
+
+.warningButton{
+    display: none;
+    position: absolute;
+    right: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+    :root {
+        --admin-1-col: 100%;
+        --admin-2-col: 100%;
+        --admin-3-col: 100%;
+        --admin-4-col: 100%;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    main{
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .btnPrimary{
+        font-size: 16px;
+    }
+
+}
+

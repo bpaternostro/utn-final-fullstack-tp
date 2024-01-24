@@ -1,0 +1,83 @@
+.filter{
+    width: 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.appliedFilter, .filterToApplied{
+    border: 1px solid var(--grey-normal);
+    padding: 2px 5px 2px 5px;
+    font-size: 12px;
+    margin: 2px;
+    letter-spacing: 0.5px;
+}
+
+.appliedFilter:hover, .filterToApplied:hover{
+    background-color: var(--color-violet);
+    color: var(--grey-white);
+}
+
+.appliedFilter{
+    background-color: var(--color-violet);
+    color: var(--grey-white);
+    
+}
+
+.filterToApplied{
+    background-color: transparent;
+}
+
+
+.appliedFilterContainer, .filterContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    gap:8px;
+}
+
+
+.filterContainer > div:nth-child(3), .filterContainer > div:nth-child(5), .appliedFilterContainer > div:nth-child(2) > div, .appliedFilterContainer > div:nth-child(3) > div{
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.sectionFilter{
+    font-size: 15px;
+    font-weight: var(--font-weight-strong);
+    letter-spacing: 0.5px;
+}
+
+.sectionFilterCategory{
+    font-size: 13px;
+    color: var(--grey-normal);
+    font-weight: var(--font-weight-light);
+    letter-spacing: 0.5px;
+}
+
+.appliedFilterContainer > div:nth-child(2), .appliedFilterContainer > div:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+@media screen and (max-width: 900px) {
+    .filter{
+        flex-direction: column;
+        width: 100%;
+    }
+    .filterContainer > div:nth-child(3), .filterContainer > div:nth-child(5), .appliedFilterContainer > div:nth-child(2) > div, .appliedFilterContainer > div:nth-child(3) > div{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .filter{
+        padding: 5px;
+    }
+}

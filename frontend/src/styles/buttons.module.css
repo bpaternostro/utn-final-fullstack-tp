@@ -1,0 +1,47 @@
+button{
+    border: none;
+}
+
+.btnPrimary, .disableBtnPrimary{
+    border-radius: 8px;
+    background: var(--site-button-color);
+    padding: 8px 20px;
+    text-align: center;
+    color: #FFF;
+    font-family: var(--font-family-links-2);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.disableBtnPrimary{
+    background: var(--gray-blue-grey-blue-70);
+    cursor: not-allowed;
+}
+
+.btnRemove{
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    font-size: 18px;
+    color: var(--grey-white);
+    font-weight: var(--font-weight-strong);
+    background-color: var(--site-button-color);
+
+}
+
+.btnPrimary:hover {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-offset: 15px;
+    background: var(--color-violet);
+}
+
+.btnRemove:hover{
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-offset: 15px;
+    background: var(--color-violet);
+}
