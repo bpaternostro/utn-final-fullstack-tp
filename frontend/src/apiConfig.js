@@ -1,5 +1,5 @@
 const ENV = "prod"
-const API_BASE_URL = ENV == "prod" ? 'http://backend_tp:4010' : "http://localhost:4010";
+const API_BASE_URL = ENV == "prod" ? 'http://bpaternostro.site/api' : "http://localhost:4010";
 
 export const ADMIN_ROLE = "admin"
 export const IMAGE_LOCATION = "img"
