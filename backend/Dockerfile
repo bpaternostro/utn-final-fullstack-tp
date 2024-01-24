@@ -15,3 +15,6 @@ COPY . .
 
 # Expose the backend port
 EXPOSE 4010
+
+# Start the application
+CMD ["npm", "start"]

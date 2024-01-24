@@ -11,7 +11,7 @@ services:
     volumes:
       - mongo_data:/data/db
     networks:
-      - my_network
+      - my_network_tp
 
   frontend:
     build:
@@ -22,7 +22,7 @@ services:
     environment:
       - NODE_ENV=production
     networks:
-      - my_network
+      - my_network_tp
 
   backend:
     build:
@@ -40,11 +40,11 @@ services:
       - static_volume:/staticfiles
       - /media:/media
     networks:
-      - my_network
+      - my_network_tp
 
 volumes:
   react_build:
   static_volume:
 
 networks:
-  my_network:
+  my_network_tp:
