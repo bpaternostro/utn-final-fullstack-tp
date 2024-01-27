@@ -1,6 +1,7 @@
-const ENV = "prod"
+const ENV = process.env.NODE_ENV
 const API_BASE_URL = ENV == "prod" ? 'https://bpaternostro.site/ecommerce/api' : "http://localhost:4010";
 
+export const ROOT = "/ecommerce"
 export const ADMIN_ROLE = "admin"
 export const IMAGE_LOCATION = "img"
 export const API_ENDPOINTS = {

@@ -5,8 +5,8 @@ import { useGlobalContext } from '../../context/GlobalContextProvider'
 import { API_ENDPOINTS } from '../../apiConfig'
 import { isAdmin } from '../../helpers/verifyToken'
 
-
 import axios from 'axios'
+import { ROOT } from '../../apiConfig'
 
 const DropDownProfile = () => {
     const {openProfile, setOpenProfile} = useGlobalContext()
@@ -20,7 +20,7 @@ const DropDownProfile = () => {
             localStorage.setItem('auth-token-app','')
             localStorage.setItem('username','')
             setOpenProfile(!openProfile)
-            navigate('/')
+            navigate(ROOT)
             return
         })
         .catch( (err) => {
@@ -31,12 +31,12 @@ const DropDownProfile = () => {
 
     const handleGoToAdmin = (e) => {
         setOpenProfile(!openProfile)
-        navigate('/admin')
+        navigate(`${ROOT}/admin`)
         return
     }
 
     const handleGoToProfile = (e) => {
-        navigate('/register')
+        navigate(`${ROOT}/register`)
         return
     }
 

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { buttonStyle,cartProductCardStyle } from '../../styles'
-import { Link } from 'react-router-dom'
 import { useGlobalContext } from '../../context/GlobalContextProvider'
 import { API_ENDPOINTS } from '../../apiConfig'
 const CardProductcard = ({ name, category, price, currency, stock, img, quantity, _id }) => {

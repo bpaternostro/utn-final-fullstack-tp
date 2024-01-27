@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { buttonStyle, contactStyle, indexStyle } from '../styles'
 import { Link, useNavigate } from 'react-router-dom'
-import { API_ENDPOINTS } from '../apiConfig'
+import { API_ENDPOINTS, ROOT } from '../apiConfig'
 import { isAdmin } from '../helpers/verifyToken'
 
 import { jwtDecode } from 'jwt-decode';
@@ -36,10 +36,10 @@ const Login = () => {
       const decoded = jwtDecode(token)
       localStorage.setItem('username', decoded.name)
       if(isAdmin()){
-        navigate('/admin')
+        navigate(`${ROOT}/admin`)
         return
       }else{
-        navigate('/')
+        navigate(ROOT)
         return
       }
     })
@@ -68,7 +68,7 @@ const Login = () => {
                       </span>
                       <div className={contactStyle.forwardLinkContainer}>
                         <span><p>Si todavia no estas registrado, podes hacerlo aqui:</p></span>
-                        <span><Link to="/register">Click aqui!</Link></span>
+                        <span><Link to={`${ROOT}/register`}>Click aqui!</Link></span>
                       </div>
                   </div>
                   {

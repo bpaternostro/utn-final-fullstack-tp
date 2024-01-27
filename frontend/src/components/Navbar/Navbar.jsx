@@ -11,6 +11,7 @@ import { navbarStyle, buttonStyle } from '../../styles'
 import { useGlobalContext } from '../../context/GlobalContextProvider'
 
 import { verifyUser } from '../../helpers/verifyToken'
+import { ROOT } from '../../apiConfig'
 
 const Navbar = () => {
     const {cart, filterBySearchInputBox, openProfile, setOpenProfile} = useGlobalContext()
@@ -39,7 +40,7 @@ const Navbar = () => {
                 <span><FaShop size={35} color="#4D5E80" /></span>
             </div>
             {
-                location.pathname ==='/' ?
+                location.pathname === ROOT ?
                 <div className={navbarStyle.searchContainer}>
                     <span>
                         <AiOutlineSearch size={18}/>
@@ -58,21 +59,21 @@ const Navbar = () => {
                 </span>
                 <span style={{display: show ? "none": "block"}}>
                     <nav>
-                        <Link to="/contact" title="Contacto">
+                        <Link to={`${ROOT}/contact`} title="Contacto">
                             <RiMessage3Line className={navbarStyle.contactLabelIcon} size={18} />
-                            { location.pathname ==='/contact' ? <span className={navbarStyle.sectionMark} style={{display:"block"}}></span> : <span className={navbarStyle.sectionMark} style={{display:"none"}}></span>}
+                            { location.pathname === `${ROOT}/contact` ? <span className={navbarStyle.sectionMark} style={{display:"block"}}></span> : <span className={navbarStyle.sectionMark} style={{display:"none"}}></span>}
                         </Link>
-                        <Link to="/" title="Marketplace">
+                        <Link to={ROOT} title="Marketplace">
                             <ImHome3 size={18}/>
-                            { location.pathname ==='/' ? <span className={navbarStyle.sectionMark} style={{display:"block"}}></span> : <span className={navbarStyle.sectionMark} style={{display:"none"}}></span>}
+                            { location.pathname === ROOT ? <span className={navbarStyle.sectionMark} style={{display:"block"}}></span> : <span className={navbarStyle.sectionMark} style={{display:"none"}}></span>}
                         </Link>
                         <Link to="" id={navbarStyle.searchNavIcon} onClick={handleShowSearch}>
                                 <AiOutlineSearch size={18} />
                         </Link>
-                        <Link to="/cart" className={navbarStyle.cartBanner} title="Carrito de compras">
+                        <Link to={`${ROOT}/cart`} className={navbarStyle.cartBanner} title="Carrito de compras">
                             <div><span className={navbarStyle.cartBubble}>{cart.length}</span></div>
                             <FaShoppingCart size={18}/>
-                            { location.pathname ==='/cart' ? <span className={navbarStyle.sectionMark} style={{display:"block"}}></span> : <span className={navbarStyle.sectionMark} style={{display:"none"}}></span>}
+                            { location.pathname === `${ROOT}/cart` ? <span className={navbarStyle.sectionMark} style={{display:"block"}}></span> : <span className={navbarStyle.sectionMark} style={{display:"none"}}></span>}
                         </Link>
                         {
                             localStorage.getItem('username') ?
@@ -81,7 +82,7 @@ const Navbar = () => {
                                     {openProfile && <DropDownProfile/>} 
                                 </div>
                                 :
-                                <Link to="/identify" id={navbarStyle.login} title="Login / Registrarse">
+                                <Link to={`${ROOT}/identify`} id={navbarStyle.login} title="Login / Registrarse">
                                     <FaUserAlt size={18} />
                                 </Link>
                         }

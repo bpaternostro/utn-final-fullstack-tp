@@ -4,7 +4,7 @@ import {cartStyle, buttonStyle, indexStyle} from '../styles'
 
 import { useGlobalContext } from '../context/GlobalContextProvider'
 import { Link } from 'react-router-dom'
-
+import { ROOT } from '../apiConfig'
 const Cart = () => {
   const {cart, cartTotal, currency} = useGlobalContext()
   return (
@@ -22,7 +22,7 @@ const Cart = () => {
           <div>
             {
               cart.length ?
-              <Link className={buttonStyle.btnPrimary} to="/" >Agregar mas productos</Link> :
+              <Link className={buttonStyle.btnPrimary} to={ROOT} >Agregar mas productos</Link> :
               <span></span>
             }
           </div>

@@ -5,7 +5,7 @@ import { Productrow, Modal } from '../components'
 import { isAdmin, verifyToken } from '../helpers/verifyToken'
 import { useGlobalContext } from '../context/GlobalContextProvider'
 import { useModalContext } from '../context/ModalContextProvider'
-import { API_ENDPOINTS } from '../apiConfig'
+import { API_ENDPOINTS, ROOT } from '../apiConfig'
 import { HiOutlinePlusCircle } from "react-icons/hi";
 
 const Admin = () => {
@@ -36,7 +36,7 @@ const Admin = () => {
 
   useEffect(() => {
     if(!isAdmin()){
-      navigate('/')
+      navigate(ROOT)
     }
   },[])
 
@@ -47,7 +47,7 @@ const Admin = () => {
         <div className={ adminStyle.adminSectionContainer }>
           <div className={ adminStyle.adminSections}>
               <div className={ adminStyle.toolbar}>
-                <Link className={ buttonStyle.btnPrimary } to='/create-product'><HiOutlinePlusCircle title="Crear producto" size={25} /> Producto</Link>
+                <Link className={ buttonStyle.btnPrimary } to={`${ROOT}/create-product`}><HiOutlinePlusCircle title="Crear producto" size={25} /> Producto</Link>
               </div>
                <div className={ adminStyle.adminTable}>
                 <div className={ adminStyle.adminTableBody}>  

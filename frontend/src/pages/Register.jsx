@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import { adminStyle, buttonStyle, contactStyle, indexStyle } from '../styles'
+import { buttonStyle, contactStyle, indexStyle } from '../styles'
 import { Link, useNavigate } from 'react-router-dom'
-import { API_ENDPOINTS } from '../apiConfig'
+import { API_ENDPOINTS, ROOT } from '../apiConfig'
 
 import axios from 'axios'
 import { getUserId } from '../helpers/verifyToken'
@@ -36,7 +36,7 @@ const Register = () => {
     if(!userId){
       axios.post(API_ENDPOINTS.register, formValues)
       .then( resp => {
-        navigate('/login')
+        navigate(`${ROOT}/login`)
         return
       })
       .catch(error => {
@@ -94,7 +94,7 @@ const Register = () => {
                       {!userId ? 
                         <div className={contactStyle.forwardLinkContainer}>
                           <span><p>Ya tenes una cuenta?</p></span>
-                          <span><Link to="/Login">Click aqui!</Link></span>
+                          <span><Link to={`${ROOT}/login`}>Click aqui!</Link></span>
                         </div>
                         :
                         <div></div>

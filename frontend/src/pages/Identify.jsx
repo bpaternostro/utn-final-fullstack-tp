@@ -1,5 +1,7 @@
 import { buttonStyle, identifyStyle, indexStyle } from '../styles'
 import { Link, useNavigate } from 'react-router-dom'
+import { ROOT } from '../apiConfig'
+
 const Identify = () => {
 
   return (
@@ -9,11 +11,11 @@ const Identify = () => {
               <div>
                 <div className={indexStyle.boxContainer}>
                   <span><h3>Si todavia no estas registrado</h3></span>
-                  <span><Link className={buttonStyle.btnPrimary} to="/register">Registrate</Link></span>
+                  <span><Link className={buttonStyle.btnPrimary} to={`${ROOT}/register`}>Registrate</Link></span>
                 </div>
                 <div className={indexStyle.boxContainer}>
                   <span><h3>Si ya dispones de un usuario</h3></span>
-                  <span><Link className={buttonStyle.btnPrimary} to="/login">Ingresar</Link></span>
+                  <span><Link className={buttonStyle.btnPrimary} to={`${ROOT}/login`}>Ingresar</Link></span>
                 </div>
               </div>
         </div>

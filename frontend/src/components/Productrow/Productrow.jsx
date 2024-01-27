@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import { adminStyle, indexStyle, buttonStyle  } from '../../styles'
-import { API_ENDPOINTS } from '../../apiConfig';
+import { adminStyle } from '../../styles'
+import { API_ENDPOINTS, ROOT } from '../../apiConfig';
 import { useGlobalContext } from '../../context/GlobalContextProvider'
 import { useModalContext } from '../../context/ModalContextProvider'
 
@@ -60,7 +60,7 @@ const Productrow = ({ name, description, category, price, currency, stock, img, 
             <span>
               <VscTools size={18} className={adminStyle.iconTable}/>
               <span className={adminStyle.adminTableBubble}>
-                <Link to={`/edit-product/${_id}`}><FaEdit size={18} color={"#4D5E80"} title="Editar producto"/></Link>
+                <Link to={`${ROOT}/edit-product/${_id}`}><FaEdit size={18} color={"#4D5E80"} title="Editar producto"/></Link>
                 <button onClick={handlePopUp}><MdDelete size={18} color={"#4D5E80"} title="Eliminar producto" /></button>
               </span>
             </span>

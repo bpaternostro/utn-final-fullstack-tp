@@ -3,6 +3,7 @@ import { buttonStyle, contactStyle, indexStyle } from '../styles'
 import { Link } from 'react-router-dom'
 
 import { RiErrorWarningLine } from "react-icons/ri";
+import { ROOT } from '../apiConfig';
 
 const Contact = () => {
   return (
@@ -32,7 +33,7 @@ const Contact = () => {
                       </span>
                   </div>
                   <div>
-                      <Link to="/success" className={buttonStyle.btnPrimary}>Enviar</Link>
+                      <Link to={`${ROOT}/success`} className={buttonStyle.btnPrimary}>Enviar</Link>
                   </div>
               </form>
         </div>

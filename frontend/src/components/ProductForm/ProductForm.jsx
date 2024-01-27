@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useGlobalContext } from '../../context/GlobalContextProvider'
 
 import { adminStyle, indexStyle, buttonStyle} from '../../styles'
-import { API_ENDPOINTS, IMAGE_LOCATION } from '../../apiConfig';
+import { API_ENDPOINTS, IMAGE_LOCATION, ROOT } from '../../apiConfig';
 
 import { RiErrorWarningLine } from "react-icons/ri";
 
@@ -207,7 +207,7 @@ const ProductForm = ({ id }) => {
             </div>
             <div className={adminStyle.toolbar}>
                 <button type='submit' className={buttonStyle.btnPrimary} onSubmit={() => handleSubmit(e)}>{id ? 'Guardar': 'Crear'}</button>
-                <Link to='/admin' className={buttonStyle.btnPrimary}>Volver</Link>
+                <Link to={`${ROOT}/admin`} className={buttonStyle.btnPrimary}>Volver</Link>
             </div>
         </form>
     </div>

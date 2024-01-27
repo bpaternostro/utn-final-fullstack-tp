@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { productCardStyle, indexStyle  } from '../../styles'
 import { Link } from 'react-router-dom'
-import { API_ENDPOINTS } from '../../apiConfig'
+import { API_ENDPOINTS, ROOT } from '../../apiConfig'
 
 const Productcard = ({ name, category, price, currency, stock, img, _id }) => {
   return (
-    <Link to={`/detail/${_id}`} className={`${ productCardStyle.product } ${indexStyle.boxContainer}`} style={{pointerEvents: stock > 0 ? '' : 'none'}}>
+    <Link to={`${ROOT}/detail/${_id}`} className={`${ productCardStyle.product } ${indexStyle.boxContainer}`} style={{pointerEvents: stock > 0 ? '' : 'none'}}>
         <span className={productCardStyle.imageContainer}>
           <img src={`${API_ENDPOINTS.images}/${img.src}`} alt={img.alt} />
         </span>
