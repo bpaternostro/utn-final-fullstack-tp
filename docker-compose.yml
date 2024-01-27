@@ -51,8 +51,8 @@ services:
     volumes:
       - static_volume:/staticfiles
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
-      - react_build:/etc/nginx/html
-      - react_build_tp:/etc/nginx/html/ecommerce
+      - react_build:/etc/nginx/html:ro
+      - react_build_tp:/etc/nginx/html/ecommerce:ro
       - /etc/letsencrypt/live/bpaternostro.site/fullchain.pem:/etc/nginx/certs/fullchain.pem:ro
       - /etc/letsencrypt/live/bpaternostro.site/privkey.pem:/etc/nginx/private/privkey.pem:ro
       - /media:/media:ro
@@ -65,7 +65,6 @@ services:
 
 volumes:
   react_build:
-  react_build_tp:
   static_volume:
   mongo_data:
 
