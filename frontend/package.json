@@ -3,10 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "/ecommerce",
+  "homepage": "./ecommerce",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base /ecommerce/",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },

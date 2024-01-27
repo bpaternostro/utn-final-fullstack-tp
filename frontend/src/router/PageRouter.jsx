@@ -6,7 +6,7 @@ import '../styles/index.module.css'
 const PageRouter = () => {
   return (
     <>
-      <Routes>
+      <Routes basename="/ecommerce">
             <Route path='/' element={<Home/>} />
             <Route path='/admin' element={<Admin/>} />
             <Route path='/identify' element={<Identify/>} />
