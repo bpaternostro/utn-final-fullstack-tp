@@ -14,12 +14,13 @@ app.use(express.static(__dirname + '/public'))
 app.use(express.json())
 
 const PORT = process.env.PORT
+const ROOT = process.env.ROOT
 const productRouter = require('./router/productRouter')
 const authRouter = require('./router/authRouter')
 
-app.use('/img', express.static(process.env.IMAGE_LOCATION));
-app.use('/products', productRouter)
-app.use('/auth', authRouter)
+app.use(ROOT + '/img', express.static(process.env.IMAGE_LOCATION));
+app.use(ROOT + '/products', productRouter)
+app.use(ROOT + '/auth', authRouter)
 
 
 app.listen(PORT, () => {
