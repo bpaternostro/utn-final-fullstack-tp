@@ -119,14 +119,6 @@ input:invalid + .warningButton {
     right: 10px;
 }
 
-@media screen and (max-width: 1300px) {
-    :root {
-        --admin-2-col: 30%;
-        --admin-3-col: 33%;
-        --admin-4-col: 10%;
-    }
-}
-
 @media screen and (max-width: 1100px) {
     :root {
         --admin-1-col: 100%;

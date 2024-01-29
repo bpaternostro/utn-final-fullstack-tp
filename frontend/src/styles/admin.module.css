@@ -263,9 +263,20 @@ main > .mainContainer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 7px;
     font-size: 14px;
     color: var(--gray-blue-grey-blue-50);
+}
+
+
+
+@media screen and (max-width: 1500px) {
+    .adminRow > div:nth-child(3){
+        flex-direction: column;
+    }
+    .adminRow > div:nth-child(3) > span{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 1100px) {
@@ -273,7 +284,10 @@ main > .mainContainer {
     .adminRow{
         flex-direction: column;
     }
-
+    
+    .adminRow > div:nth-child(3){
+        flex-direction: row;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -310,6 +324,7 @@ main > .mainContainer {
     .productFormContainer > span:nth-child(1){
         width: 100%;
     }
+
 }
 
 @media screen and (max-width: 500px) {
