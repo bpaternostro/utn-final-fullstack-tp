@@ -10,7 +10,7 @@ import { HiOutlinePlusCircle } from "react-icons/hi";
 
 const Admin = () => {
   const navigate = useNavigate()
-  const {products, setProductsHasChanged} = useGlobalContext()
+  const {allProducts, setProductsHasChanged} = useGlobalContext()
   const {toggleModal, setModalText, setModalError, setEntityId} = useModalContext()
   
   const handleDelete = (id) => {  
@@ -38,7 +38,7 @@ const Admin = () => {
     if(!isAdmin()){
       navigate(ROOT)
     }
-  },[])
+  },[allProducts, toggleModal])
 
   return (
     <main>
@@ -52,7 +52,7 @@ const Admin = () => {
                <div className={ adminStyle.adminTable}>
                 <div className={ adminStyle.adminTableBody}>  
                   {
-                    products.map((product) =>(
+                    allProducts.map((product) =>(
                         <Productrow {...product} key={product._id} />
                     ))
                   }

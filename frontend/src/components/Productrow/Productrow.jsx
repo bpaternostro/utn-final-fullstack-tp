@@ -24,6 +24,7 @@ const Productrow = ({ name, description, category, price, currency, stock, img, 
     setEntityId(_id)
     setModalTitle("Eliminar producto")
     setModalText(`Usted esta por eliminar ${name}. Esta acción eliminara de manera permanente el producto. Desea continuar?`)
+    setProductsHasChanged(true)
     toggleModal(true)
   }
 

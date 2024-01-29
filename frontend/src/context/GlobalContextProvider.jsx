@@ -102,12 +102,15 @@ const GlobalContextProvider = ({children}) => {
             setProductsToShow(res.data.products)
             setBrands([...new Set(res.data.products.map(item => item.brand))])
             setCategories([...new Set(res.data.products.map(item => item.category))])
+            setProductsHasChanged(false)
         })
-    },[])
+    },[productsHasChanged])
     
 
     return (
-        <GlobalContext.Provider value={{brands, 
+        <GlobalContext.Provider value={{
+            allProducts,
+            brands, 
             cart, 
             cartTotal, 
             products, 
@@ -123,7 +126,8 @@ const GlobalContextProvider = ({children}) => {
             handleFilterFields, 
             handleClickBtn,
             openProfile, 
-            setOpenProfile, 
+            setOpenProfile,
+            productsHasChanged,
             setProductsHasChanged}}>
             {children}
         </GlobalContext.Provider>

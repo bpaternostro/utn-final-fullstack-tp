@@ -1,4 +1,4 @@
-const ENV = "prod"
+const ENV = process.env.NODE_ENV
 const API_BASE_URL = ENV == "prod" ? 'https://bpaternostro.site/ecommerce/api' : "http://localhost:4010/ecommerce/api";
 
 export const ROOT = "/ecommerce"
