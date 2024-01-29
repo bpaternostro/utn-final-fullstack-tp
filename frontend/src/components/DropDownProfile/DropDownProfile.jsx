@@ -36,6 +36,7 @@ const DropDownProfile = () => {
     }
 
     const handleGoToProfile = (e) => {
+        setOpenProfile(!openProfile)
         navigate(`${ROOT}/register`)
         return
     }
@@ -56,7 +57,7 @@ const DropDownProfile = () => {
 
 
     return (
-        <div className='flex flex col' ref={menuRef}>
+        <div ref={menuRef}>
             <ul className={`flex flex-col gap-4 ${ navbarStyle.dropDownProfile}`}>
                 <li onClick={(e) => handleGoToProfile(e)}>Profile</li>
                 <li onClick={(e) => handleGoToAdmin(e)} style={{display: isAdmin() ? "block": "none"}}>Admin</li>

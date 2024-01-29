@@ -18,7 +18,8 @@ const Navbar = () => {
     const [show, setShow] = useState(false)
     const location = useLocation();
     const [time, setTime] = useState(new Date());
-    const handleShowSearch = () => {
+    const handleShowSearch = (e) => {
+        e.preventDefault()
         setShow(!show)
     }
     
@@ -52,7 +53,7 @@ const Navbar = () => {
                 <span>
                     {
                         show && <span style={{"display":"block"}}>
-                                    <button className={buttonStyle.btnRemove} onClick={handleShowSearch}>x</button>
+                                    <button className={buttonStyle.btnRemove} onClick={(e) => handleShowSearch(e)}>x</button>
                                     <input type="text" name="search" id={navbarStyle.searchMobile} placeholder="Buscar ..." onChange={filterBySearchInputBox}/>
                                 </span>
                     }
@@ -67,7 +68,7 @@ const Navbar = () => {
                             <ImHome3 size={18}/>
                             { location.pathname === ROOT ? <span className={navbarStyle.sectionMark} style={{display:"block"}}></span> : <span className={navbarStyle.sectionMark} style={{display:"none"}}></span>}
                         </Link>
-                        <Link to="" id={navbarStyle.searchNavIcon} onClick={handleShowSearch}>
+                        <Link to="" id={navbarStyle.searchNavIcon} onClick={(e) => handleShowSearch(e)}>
                                 <AiOutlineSearch size={18} />
                         </Link>
                         <Link to={`${ROOT}/cart`} className={navbarStyle.cartBanner} title="Carrito de compras">
