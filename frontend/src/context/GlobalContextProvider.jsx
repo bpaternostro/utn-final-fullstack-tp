@@ -5,6 +5,7 @@ import axios from 'axios'
 
 const GlobalContext = createContext()
 const GlobalContextProvider = ({children}) => {
+    const [allProducts, setAllProducts] = useState([])
     const [products, setProductsToShow] = useState([])
     const [productsHasChanged, setProductsHasChanged] = useState(false)
     const [cart, setCart] = useState([])
@@ -79,14 +80,15 @@ const GlobalContextProvider = ({children}) => {
         console.log(evento.target.value.toLowerCase())
         let normalizedString = evento.target.value.toLowerCase()
         if(normalizedString) {
-            setProductsToShow(products.filter(p => p.name.toLowerCase().includes(normalizedString) || p.category.toLowerCase().includes(normalizedString) || p.brand.toLowerCase().includes(normalizedString)))
+            setProductsToShow(allProducts.filter(p => p.name.toLowerCase().includes(normalizedString) || p.category.toLowerCase().includes(normalizedString) || p.brand.toLowerCase().includes(normalizedString)))
         }else{
-            filterFields.length ? setProductsToShow(products.filter(p => productMustBeDisplayed(p))) : setProductsToShow(products)
+            filterFields.length ? setProductsToShow(allProducts.filter(p => productMustBeDisplayed(p))) : setProductsToShow(allProducts)
         }
     }
 
+   
     useEffect(() => {
-        filterFields.length ? setProductsToShow(products.filter(p => productMustBeDisplayed(p))) : setProductsToShow(products)
+        filterFields.length ? setProductsToShow(allProducts.filter(p => productMustBeDisplayed(p))) : setProductsToShow(allProducts)
     },[filterFields])
 
     useEffect(() => {
@@ -96,12 +98,12 @@ const GlobalContextProvider = ({children}) => {
     useEffect(() => {
         axios.get(API_ENDPOINTS.products)
         .then(res =>{
+            setAllProducts(res.data.products)
             setProductsToShow(res.data.products)
             setBrands([...new Set(res.data.products.map(item => item.brand))])
             setCategories([...new Set(res.data.products.map(item => item.category))])
-            setProductsHasChanged(false)
         })
-    },[productsHasChanged])
+    },[])
     
 
     return (

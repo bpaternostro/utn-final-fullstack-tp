@@ -95,7 +95,7 @@ const ProductForm = ({ id }) => {
     })
     .then( resp => {
       setProductsHasChanged(true)
-      navigate('/admin')
+      navigate(`${ROOT}/admin`)
       return
     })
     .catch(error => {

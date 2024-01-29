@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { API_ENDPOINTS, ADMIN_ROLE } from '../apiConfig'
+import { API_ENDPOINTS, ADMIN_ROLE, ROOT } from '../apiConfig'
 
 import { jwtDecode } from 'jwt-decode';
 
@@ -11,7 +11,7 @@ export const verifyToken = (navigate) =>{
       })
       .catch( (err) => {
         console.log(err)
-        navigate('/login')
+        navigate(`${ROOT}/login`)
         return
       })
 }

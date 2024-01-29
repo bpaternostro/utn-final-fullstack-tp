@@ -1,5 +1,5 @@
-const ENV = "prod"
-const API_BASE_URL = ENV == "prod" ? 'https://bpaternostro.site/ecommerce/api' : "http://localhost:4010";
+const ENV = "local"
+const API_BASE_URL = ENV == "prod" ? 'https://bpaternostro.site/ecommerce/api' : "http://localhost:4010/ecommerce/api";
 
 export const ROOT = "/ecommerce"
 export const ADMIN_ROLE = "admin"

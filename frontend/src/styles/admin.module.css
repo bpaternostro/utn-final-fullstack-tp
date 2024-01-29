@@ -79,6 +79,7 @@ main > .mainContainer {
     width: var(--admin-1-col);
     background-color: var(--grey-white);
     border-radius: 15px;
+    padding: 15px;
 }
 
 .adminRow > div:nth-child(1) > span{
