@@ -38,7 +38,7 @@ const Admin = () => {
     if(!isAdmin()){
       navigate(ROOT)
     }
-  },[allProducts, toggleModal])
+  },[allProducts])
 
   return (
     <main>

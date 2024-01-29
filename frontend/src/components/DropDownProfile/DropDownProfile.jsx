@@ -9,7 +9,7 @@ import axios from 'axios'
 import { ROOT } from '../../apiConfig'
 
 const DropDownProfile = () => {
-    const {openProfile, setOpenProfile} = useGlobalContext()
+    const {openProfile, setOpenProfile, setCart, setFilterFields} = useGlobalContext()
     const navigate = useNavigate()
     const menuRef = useRef()
 
@@ -20,6 +20,8 @@ const DropDownProfile = () => {
             localStorage.setItem('auth-token-app','')
             localStorage.setItem('username','')
             setOpenProfile(!openProfile)
+            setCart([])
+            setFilterFields([])
             navigate(ROOT)
             return
         })

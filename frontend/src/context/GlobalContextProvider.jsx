@@ -112,6 +112,7 @@ const GlobalContextProvider = ({children}) => {
             allProducts,
             brands, 
             cart, 
+            setCart,
             cartTotal, 
             products, 
             categories, 
@@ -127,6 +128,7 @@ const GlobalContextProvider = ({children}) => {
             handleClickBtn,
             openProfile, 
             setOpenProfile,
+            setFilterFields,
             productsHasChanged,
             setProductsHasChanged}}>
             {children}
