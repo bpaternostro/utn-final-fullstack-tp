@@ -47,7 +47,7 @@ const Navbar = () => {
                         <AiOutlineSearch size={18}/>
                     </span>
                     <input type="text" name="search" id={navbarStyle.searchMobile} placeholder="Buscar ..." onChange={filterBySearchInputBox} />
-                </div>:<div></div>
+                </div>:<span></span>
             }
             <div>
                 <span>
