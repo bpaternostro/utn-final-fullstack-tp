@@ -4,7 +4,7 @@ Este proyecto está disponible en [https://bpaternostro.site/ecommerce](https://
 
 ## Descripción del proyecto
 
-- La idea principal fue dar continuidad al desarrollo del TP de Frontend.
+- Se integró el nuevo `backend` con el `frontend` desarrollado en el TP de Frontend.
 
 ## Funcionalidades
 
