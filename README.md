@@ -1,6 +1,6 @@
 # utn-final-fullstack-tp
 
-Este proyecto está disponible en [https://bpaternostro.site/ecommerce](https://bpaternostro.site/ecommerce){:target="_blank"}.
+Este proyecto está disponible en [https://bpaternostro.site/ecommerce](https://bpaternostro.site/ecommerce).
 
 ## Descripción del proyecto
 
@@ -16,7 +16,7 @@ Este proyecto está disponible en [https://bpaternostro.site/ecommerce](https://
   - Tras la registración, el usuario debería recibir un correo de confirmación.
   - Al hacer logout con productos en el carrito, este se vacía.
 - Existe un módulo de admin que permite ejecutar el ABM de productos.
-  - URL: [https://bpaternostro.site/ecommerce/admin](https://bpaternostro.site/ecommerce/admin){:target="_blank"} (solo para usuarios admin).
+  - URL: [https://bpaternostro.site/ecommerce/admin](https://bpaternostro.site/ecommerce/admin) (solo para usuarios admin).
 - Es posible actualizar el perfil del usuario logueado (Customer o ADMIN).
 - El sitio de admin cuenta con un ABM que permite realizar el CRUD de productos.
 
