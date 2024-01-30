@@ -1,6 +1,6 @@
 # utn-final-fullstack-tp
 
-Este proyecto está disponible en [https://bpaternostro.site/ecommerce](https://bpaternostro.site/ecommerce).
+Este proyecto está disponible en [https://bpaternostro.site/ecommerce](https://bpaternostro.site/ecommerce){:target="_blank"}.
 
 ## Descripción del proyecto
 
@@ -9,15 +9,15 @@ Este proyecto está disponible en [https://bpaternostro.site/ecommerce](https://
 ## Funcionalidades
 
 - Toda la información relacionada con usuarios y productos se obtiene desde el Backend.
-- Es posible realizar operaciones de Login, Logout y Registrarse como usuario.
-  - Haz clic en el icono de usuario en la barra de navegación.
-  - Los usuarios registrados a través del formulario tienen el perfil "customer". No ven la opción del módulo de admin.
+- Es posible realizar operaciones de login, logout y registrarse como usuario.
+  - Hacer click en el icono de usuario en la barra de navegación.
+  - Los usuarios registrados a través del formulario tienen el perfil `customer`. No ven la opción del módulo de admin.
   - Después de iniciar sesión, el nombre del usuario y un saludo aparecen en la barra de navegación.
   - Tras la registración, el usuario debería recibir un correo de confirmación.
-  - Al hacer Logout con productos en el carrito, este se vacía.
+  - Al hacer logout con productos en el carrito, este se vacía.
 - Existe un módulo de admin que permite ejecutar el ABM de productos.
-  - URL: [https://bpaternostro.site/ecommerce/admin](https://bpaternostro.site/ecommerce/admin) (solo para usuarios admin).
-- Puedes actualizar el perfil del usuario logueado (Customer o ADMIN).
+  - URL: [https://bpaternostro.site/ecommerce/admin](https://bpaternostro.site/ecommerce/admin){:target="_blank"} (solo para usuarios admin).
+- Es posible actualizar el perfil del usuario logueado (Customer o ADMIN).
 - El sitio de admin cuenta con un ABM que permite realizar el CRUD de productos.
 
 ## Desarrollo
