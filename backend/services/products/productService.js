@@ -24,12 +24,11 @@ const createDefaultProduct = async () => {
                     }
                 ]
             })
+            await defaultProduct.save();
+            console.log('Default Product created successfully');
         } else {
             console.log('Default product already exists');
         }
-  
-        await defaultProduct.save();
-        console.log('Default Product created successfully');
 
     } catch (error) {
       console.error('Error creating default product:', error);
