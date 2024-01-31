@@ -7,12 +7,12 @@ const createDefaultProduct = async () => {
         if (!existingProduct) {
             const defaultProduct = new Product({
                 name: prodName,
-                category: "Smart Tv 43 Pulgadas Full HD 43A42H",
-                brand: "HISENSE",
-                price: 219999.56,
+                category: "SMART TV",
+                brand: "Hisense",
+                price: 995566.56,
                 description: "El Smart TV Hisense 43 pulgadas FULL HD (1920 x 1080 píxeles) cuenta con una pantalla de visualización 16:9. La cual brinda una gran calidad de imagen y contraste.",
                 currency: "$",
-                stock: 3,
+                stock: 100,
                 img: {
                     src: "img/tv-hisense-43.jpg",
                     alt: "Smart Tv 43 Pulgadas Full HD 43A42H"
