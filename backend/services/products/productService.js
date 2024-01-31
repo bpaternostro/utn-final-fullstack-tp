@@ -2,25 +2,31 @@ const Product = require('../../models/productModel')
 
 const createDefaultProduct = async () => {
     try {
-        const defaultProduct = new Product({
-            name: "Smart Tv 50 Pulgadas 4K Ultra HD 50PUD7406/77",
-            category: "SMART TV",
-            brand: "Phillips",
-            price: 219999.56,
-            description: "Televisor Smart Android de 50'' LED 4K UHD. Potencia 20W. Resolucion 3840 x 2160. Salidas de audio digital (optica) Dolby Atmos. Bluetooth. Wi Fi. Entrada video componente. 2 Entradas USB. 4 Entradas HDMI. Incluye Control remoto, Guia de inicio rapida, Folleto legal y de seguridad, Cable de alimentacion, Soporte para la mesa, 2 pilas AAA.",
-            currency: "$",
-            stock: 3,
-            img: {
-                src: "tv-phillips-50.jpg",
-                alt: "Smart Tv 50 Pulgadas 4K Ultra HD 50PUD7406/77 - PHILIPS"
-            },
-            colors: [
-                {
-                    color: "#737CA1",
-                    colorName: "Slate Blue Grey"
-                }
-            ]
-        });
+        const prodName = "Smart Tv 50 Pulgadas 4K Ultra HD 50PUD7406/77"
+        const existingProduct = await Product.findOne({ name: prodName });
+        if (!existingProduct) {
+            const defaultProduct = new Product({
+                name: prodName,
+                category: "Smart Tv 43 Pulgadas Full HD 43A42H",
+                brand: "HISENSE",
+                price: 219999.56,
+                description: "El Smart TV Hisense 43 pulgadas FULL HD (1920 x 1080 píxeles) cuenta con una pantalla de visualización 16:9. La cual brinda una gran calidad de imagen y contraste.",
+                currency: "$",
+                stock: 3,
+                img: {
+                    src: "img/tv-hisense-43.jpg",
+                    alt: "Smart Tv 43 Pulgadas Full HD 43A42H"
+                },
+                colors: [
+                    {
+                        color: "#737CA1",
+                        colorName: "Slate Blue Grey"
+                    }
+                ]
+            })
+        } else {
+            console.log('Default product already exists');
+        }
   
         await defaultProduct.save();
         console.log('Default Product created successfully');
