@@ -33,10 +33,7 @@ const createDefaultProduct = async () => {
 
     } catch (error) {
       console.error('Error creating default product:', error);
-    } finally {
-      // Close the MongoDB connection after creating the default user
-      mongoose.connection.close();
-    }
+    } 
 };
 
 const getProductsFromMongo = async (limit) => {

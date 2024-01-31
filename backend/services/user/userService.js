@@ -24,9 +24,6 @@ const createDefaultUser = async () => {
       }
     } catch (error) {
       console.error('Error creating default user:', error);
-    } finally {
-      // Close the MongoDB connection after creating the default user
-      mongoose.connection.close();
     }
 };
 
