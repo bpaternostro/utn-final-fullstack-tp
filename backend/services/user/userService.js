@@ -4,6 +4,32 @@ const TokenBlacklist = require('../../models/tokenModel')
 
 const secretKey = process.env.SECRET_KEY_JWT
 
+const createDefaultUser = async () => {
+    try {
+      const existingUser = await User.findOne({ email: process.env.ADMIN_USER });
+      if (!existingUser) {
+        const defaultUser = new User({
+          name: 'Admin',
+          lastname: 'Admin',
+          age: 25,
+          email: 'admin@gmail.com',
+          password: process.env.ADMIN_PASS,
+          role: "admin",
+        });
+  
+        await defaultUser.save();
+        console.log('Default user created successfully');
+      } else {
+        console.log('Default user already exists');
+      }
+    } catch (error) {
+      console.error('Error creating default user:', error);
+    } finally {
+      // Close the MongoDB connection after creating the default user
+      mongoose.connection.close();
+    }
+};
+
 const createUser = async (user) => {
     if (!(await userExist(user.email))) {
         const newUser = new User(user)
@@ -64,4 +90,4 @@ const updateUserByIdFromMongo = async (pid, newUser) => {
     return await User.findOneAndUpdate({_id:pid}, newUser, {new: true})
 }
 
-module.exports = {createUser, loginUser, logoutUser, userExist, isValidToken, getUserFromMongoById, updateUserByIdFromMongo, userIsAdmin}
+module.exports = {createDefaultUser, createUser, loginUser, logoutUser, userExist, isValidToken, getUserFromMongoById, updateUserByIdFromMongo, userIsAdmin}
