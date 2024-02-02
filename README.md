@@ -31,7 +31,6 @@ Este proyecto está disponible en [https://bpaternostro.site/ecommerce](https://
   - Token (JWT) -> para verificar la sesión.
   - Nombre de usuario -> para mostrar en pantalla.
 - Se verifica cada 10 minutos si la sesion es valida
-- 
 - Tecnologías: React + Flexbox.
 
 ### Backend
