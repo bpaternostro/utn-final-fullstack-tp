@@ -30,6 +30,8 @@ Este proyecto está disponible en [https://bpaternostro.site/ecommerce](https://
 - Se almacenan en el localstorage los datos:
   - Token (JWT) -> para verificar la sesión.
   - Nombre de usuario -> para mostrar en pantalla.
+- Se verifica cada 10 minutos si la sesion es valida
+- 
 - Tecnologías: React + Flexbox.
 
 ### Backend
@@ -38,6 +40,7 @@ Este proyecto está disponible en [https://bpaternostro.site/ecommerce](https://
   - Sesiones mediante JWT con duración de 1 hora.
   - Tipos de perfiles: "customer" y "admin".
   - Solo el usuario "admin" puede acceder al tablero de control (CRUD) del marketplace.
+    - Todas las rutas de admin son validadas mediante un middleware
 - Persistencia de datos en MongoDB.
 - Gestión de autenticación (login/logout), abm de usuarios y productos.
 - Estructura del proyecto:
